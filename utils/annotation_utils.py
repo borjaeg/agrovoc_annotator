@@ -8,6 +8,7 @@ def annotate_sentence(sentence: str, ontology_subset: List[str]) -> List[str]:
     """
     Given a sentence, this function returns the IOB annotation format of it.
     """
+    sentence = sentence.replace(",", "").replace(";", "")
     lemmatizer = WordNetLemmatizer()
     #tokenizer = RegexpTokenizer(r"\w+")
 
